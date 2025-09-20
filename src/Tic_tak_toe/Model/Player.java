@@ -3,8 +3,8 @@ package Tic_tak_toe.Model;
 public abstract class Player {
    private  int id;
    private  String name;
-    public PlayerType playerType;
-    public Symbol symbol;
+    private PlayerType playerType;
+    private Symbol symbol;
 
     public Player(PlayerType playerType, Symbol symbol,String name  , int id) {
         this.playerType = playerType;
@@ -13,6 +13,7 @@ public abstract class Player {
         this.id = id;
     }
 
-
-
+    public Symbol getSymbol() {
+        return symbol;
+    }
 }

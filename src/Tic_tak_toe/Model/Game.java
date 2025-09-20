@@ -6,17 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PrimitiveIterator;
 
-public abstract class Game {
+public  class Game {
     Board board;
     List<Player> players;
     private int nextPlayer;
     private GameState gameState;
     private List<Move> moves;
     private Player winner;
-    private WinningStrategy winningStrategy;
+    private List<WinningStrategy> winningStrategy;
 
-    public Game(Board board, List<Player> players, WinningStrategy winningStrategy) {
-        this.board = board;
+    public Game(int size, List<Player> players,List<WinningStrategy>  winningStrategy) {
+        this.board = new Board(size);
         this.players = players;
         this.winningStrategy = winningStrategy;
         this.nextPlayer = 0;
@@ -25,6 +25,23 @@ public abstract class Game {
         this.winner = null;
     }
 
-    public abstract void move();
+    public GameState getGameState() {
+        return gameState;
+    }
 
+    public List<WinningStrategy> getWinningStrategy() {
+        return winningStrategy;
+    }
+
+    public List<Move> getMoves() {
+        return moves;
+    }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    public Board getBoard() {
+        return board;
+    }
 }

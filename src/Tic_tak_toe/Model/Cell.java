@@ -12,4 +12,16 @@ public class Cell {
         this.value = CellType.EMPTY;
         this.player =null;
     }
+
+    public void display(){
+        if(value==CellType.EMPTY){
+            System.out.print("|-|");
+
+        }
+        else {
+            System.out.print("|" + player.getSymbol().getName() + "|" );
+
+        }
+
+    }
 }
