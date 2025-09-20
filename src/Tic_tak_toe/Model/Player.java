@@ -1,16 +1,18 @@
 package Tic_tak_toe.Model;
 
 public abstract class Player {
-
+   private  int id;
+   private  String name;
     public PlayerType playerType;
     public Symbol symbol;
 
-    public Player(PlayerType playerType, Symbol symbol) {
+    public Player(PlayerType playerType, Symbol symbol,String name  , int id) {
         this.playerType = playerType;
         this.symbol = symbol;
+        this.name = name;
+        this.id = id;
     }
 
-    public PlayerType getPlayerType() {
-        return playerType;
-    }
+
+
 }

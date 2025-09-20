@@ -1,12 +1,15 @@
 package Tic_tak_toe.Model;
 
 public class Cell {
-    int row;
-    int col;
-    CellType value;
-    public Cell(int row, int col, CellType value) {
+    private int row;
+    private int col;
+    private CellType value;
+    private Player player;
+
+    public Cell(int row, int col) {
         this.row = row;
         this.col = col;
-        this.value = value;
+        this.value = CellType.EMPTY;
+        this.player =null;
     }
 }
