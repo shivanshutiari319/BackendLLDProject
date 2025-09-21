@@ -11,7 +11,7 @@ public class GameClient {
         GameController gameController = new GameController();
        //1. start the game
         Game game  = gameController.Controller();
-
+      //  gameController.displayBoard(game);
 
 //2. keep playing until gamestate in in progress
         while (game.getGameState() == GameState.PLAYING){
@@ -20,7 +20,17 @@ public class GameClient {
 
             System.out.println("Welcome to Tic-Tak-toe!");
             //ii. make move
-            gameController.makeMove();
+            gameController.makeMove(game);
+
+            // update
+
+            if(game.getGameState() == GameState.FINISHED){
+                System.out.println("Game has ended!" + game.getWinner().getName() + "is the winner");
+            }
+            else if(game.getGameState() == GameState.DRAW){
+                System.out.println("Game has ended! Result is draw");
+            }
+
         }
 
 

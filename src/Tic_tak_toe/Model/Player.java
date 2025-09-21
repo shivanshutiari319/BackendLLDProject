@@ -13,7 +13,17 @@ public abstract class Player {
         this.id = id;
     }
 
+    public PlayerType getPlayerType() {
+        return playerType;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public Symbol getSymbol() {
         return symbol;
     }
+
+    public abstract Move makeMove(Board board);
 }

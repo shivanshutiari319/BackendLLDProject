@@ -44,11 +44,16 @@ public class GameController {
     }
 
     public void displayBoard(Game game){
-
-      game.getBoard().display();
+       game.getBoard().display();
     }
 
-    public void makeMove(){
+    public void makeMove(Game game){
+        game.makeMove();
+
+//        System.out.println("enter row ");
+//        int row = scanner.nextInt();
+//        System.out.println("enter column ");
+//        int column = scanner.nextInt();
 
     }
 

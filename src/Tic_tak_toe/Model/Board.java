@@ -7,6 +7,18 @@ public class Board {
     private int size;
     private List<List<Cell>> grid;
 
+    public List<List<Cell>> getGrid() {
+        return grid;
+    }
+
+    public Cell getCell(int col, int row) {
+        return grid.get(row).get(col);
+    }
+
+    public int getSize() {
+        return size;
+    }
+
     public Board(int size){
      this.size = size;
      grid= new ArrayList<>();
